@@ -2,6 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
 import Layout from "./Layout";
+import AccountLayout from "./AccountLayout";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
@@ -16,6 +17,10 @@ import ShippingAndReturns from "./pages/policy/shippingandreturns";
 import Privacy from "./pages/policy/privacypolicy";
 import TermsAndConditions from "./pages/policy/termsconditions";
 import Cookies from "./pages/policy/cookies";
+
+import AccountPage from "./pages/account/account";
+import RegisterPage from "./pages/account/register";
+import ForgotPassword from "./pages/account/forgetpassword";
 
 import "./App.css";
 import "./index.css";
@@ -120,6 +125,31 @@ export default function App() {
             <Layout>
               <Cookies />
             </Layout>
+          }
+        />
+
+        <Route
+          path="/account"
+          element={
+            <AccountLayout>
+              <AccountPage />
+            </AccountLayout>
+          }
+        />
+        <Route
+          path="/account/register"
+          element={
+            <AccountLayout>
+              <RegisterPage />
+            </AccountLayout>
+          }
+        />
+        <Route
+          path="/account/forgot-password"
+          element={
+            <AccountLayout>
+              <ForgotPassword />
+            </AccountLayout>
           }
         />
       </Routes>
