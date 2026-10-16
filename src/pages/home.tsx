@@ -41,7 +41,7 @@ const imageCardsData = {
       title: "Everyday, considered",
       description: "The foundations of a lasting wardrobe.",
       linkText: "Explore",
-      linkUrl: "/collections/everyday",
+      linkUrl: "/collections/tops",
     },
   ],
 };

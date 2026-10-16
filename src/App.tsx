@@ -10,6 +10,7 @@ import Collections from "./pages/collections";
 import Faq from "./pages/faq";
 import Journal from "./pages/journal";
 import ProductPage from "./pages/products/page";
+import IndividualCollection from "./pages/individualcollection";
 
 import SizeGuide from "./pages/guide/sizeguide";
 import CareGuide from "./pages/guide/careguide";
@@ -64,13 +65,21 @@ export default function App() {
             </Layout>
           }
         />
-        <Route 
-          path="/products/:slug" 
+        <Route
+          path="/collections/:slug"
+          element={
+            <Layout>
+              <IndividualCollection />
+            </Layout>
+          }
+        />
+        <Route
+          path="/products/:slug"
           element={
             <Layout>
               <ProductPage />
             </Layout>
-          } 
+          }
         />
         <Route
           path="/faq"

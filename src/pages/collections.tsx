@@ -15,7 +15,7 @@ import EverydayTote from "../assets/EverydayTote.png";
 
 
 
-const imageWithTextData = {
+export const imageWithTextData = {
   eyebrow: "COLLECTION / SPRING–SUMMER 2026",
   title: "The art of ease.",
   description:
@@ -27,7 +27,7 @@ const imageWithTextData = {
   imagePosition: "right" as const,
 };
 
-const collectionData = {
+export const collectionData = {
   eyebrow: "THE AUREL COLLECTION",
   title: "Considered essentials",
   description:
@@ -153,14 +153,14 @@ const collectionData = {
   ],
 };
 
-const careContentData = {
+export const careContentData = {
   eyebrow: "WEAR WELL. KEEP LONGER.",
   title: "A little care goes a long way.",
   buttonText: "Explore our care guide",
   buttonLink: "/care-guide",
 };
 
-const newsletterData = {
+export const newsletterData = {
   eyebrow: "LETTERS FROM AUREL",
   title: "A quieter kind of inbox.",
   description:

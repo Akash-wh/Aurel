@@ -73,7 +73,7 @@ export default function ProductDetails({
                 <img
                   src={images[activeImage]}
                   alt={`${imageAlt} — image ${activeImage + 1}`}
-                  className="aspect-[4/5] w-full object-cover sm:aspect-[5/5.2] lg:aspect-[0.91/1] xl:aspect-[1/1.03]"
+                  className="aspect-4/5 w-full object-cover sm:aspect-[5/5.2] lg:aspect-[0.91/1] xl:aspect-[1/1.03]"
                 />
               )}
 
