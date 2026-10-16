@@ -9,6 +9,7 @@ import Contact from "./pages/contact";
 import Collections from "./pages/collections";
 import Faq from "./pages/faq";
 import Journal from "./pages/journal";
+import ProductPage from "./pages/products/page";
 
 import SizeGuide from "./pages/guide/sizeguide";
 import CareGuide from "./pages/guide/careguide";
@@ -62,6 +63,14 @@ export default function App() {
               <Collections />
             </Layout>
           }
+        />
+        <Route 
+          path="/products/:slug" 
+          element={
+            <Layout>
+              <ProductPage />
+            </Layout>
+          } 
         />
         <Route
           path="/faq"

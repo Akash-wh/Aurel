@@ -56,7 +56,7 @@ const collectionData = {
       sizes: ["XS", "S", "M", "L"],
       color: "Beige",
       material: "Linen",
-      slug: "/products/linen-blazer",
+      slug: "/linen-blazer",
     },
     {
       id: 2,
@@ -69,7 +69,7 @@ const collectionData = {
       sizes: ["XS", "S", "M", "L", "XL"],
       color: "Beige",
       material: "Linen",
-      slug: "/products/wide-leg-trouser",
+      slug: "/wide-leg-trouser",
     },
     {
       id: 3,
@@ -83,7 +83,7 @@ const collectionData = {
       color: "Ivory",
       material: "Silk",
       isNew: true,
-      slug: "/products/silk-shirt",
+      slug: "/silk-shirt",
     },
     {
       id: 4,
@@ -96,7 +96,7 @@ const collectionData = {
       sizes: ["XS", "S", "M", "L"],
       color: "Black",
       material: "Cotton",
-      slug: "/products/column-dress",
+      slug: "/column-dress",
     },
     {
       id: 5,
@@ -109,7 +109,7 @@ const collectionData = {
       sizes: ["XS", "S", "M", "L", "XL"],
       color: "Ivory",
       material: "Cotton",
-      slug: "/products/rib-tank",
+      slug: "/rib-tank",
     },
     {
       id: 6,
@@ -122,7 +122,7 @@ const collectionData = {
       sizes: ["XS", "S", "M", "L"],
       color: "Olive",
       material: "Linen",
-      slug: "/products/wrap-skirt",
+      slug: "/wrap-skirt",
     },
     {
       id: 7,
@@ -135,7 +135,7 @@ const collectionData = {
       sizes: ["XS", "S", "M", "L"],
       color: "Taupe",
       material: "Wool",
-      slug: "/products/fine-knit",
+      slug: "/fine-knit",
     },
     {
       id: 8,
@@ -148,7 +148,7 @@ const collectionData = {
       sizes: ["One size"],
       color: "Beige",
       material: "Canvas",
-      slug: "/products/everyday-tote",
+      slug: "/everyday-tote",
     },
   ],
 };

@@ -306,7 +306,7 @@ export default function CollectionGrid({
             {filteredProducts.map((product) => (
               <article key={product.id} className="group min-w-0">
                 <Link
-                  to={product.slug}
+                  to={`/products/${product.slug}`}
                   className="relative block overflow-hidden bg-[#eeece5]"
                 >
                   <div className="aspect-3/4 overflow-hidden">
@@ -327,7 +327,10 @@ export default function CollectionGrid({
 
                 <div className="mt-3 flex items-start justify-between gap-2">
                   <h2 className="min-w-0 text-[11px] leading-5 sm:text-xs">
-                    <Link to={product.slug} className="hover:text-[#646951]">
+                    <Link
+                      to={`/products/${product.slug}`}
+                      className="hover:text-[#646951]"
+                    >
                       {product.title}
                     </Link>
                   </h2>
