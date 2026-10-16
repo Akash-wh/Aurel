@@ -1,4 +1,3 @@
-
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -49,17 +48,17 @@ export default function CollectionGrid({
 
   const sizes = useMemo(
     () => [...new Set(products.flatMap((product) => product.sizes))].sort(),
-    [products]
+    [products],
   );
 
   const colors = useMemo(
     () => [...new Set(products.map((product) => product.color))].sort(),
-    [products]
+    [products],
   );
 
   const materials = useMemo(
     () => [...new Set(products.map((product) => product.material))].sort(),
-    [products]
+    [products],
   );
 
   const filteredProducts = useMemo(() => {
@@ -67,11 +66,9 @@ export default function CollectionGrid({
       const categoryMatch =
         activeCategory === "all" || product.category === activeCategory;
 
-      const sizeMatch =
-        !selectedSize || product.sizes.includes(selectedSize);
+      const sizeMatch = !selectedSize || product.sizes.includes(selectedSize);
 
-      const colorMatch =
-        !selectedColor || product.color === selectedColor;
+      const colorMatch = !selectedColor || product.color === selectedColor;
 
       const materialMatch =
         !selectedMaterial || product.material === selectedMaterial;
@@ -87,11 +84,7 @@ export default function CollectionGrid({
       }
 
       return (
-        categoryMatch &&
-        sizeMatch &&
-        colorMatch &&
-        materialMatch &&
-        priceMatch
+        categoryMatch && sizeMatch && colorMatch && materialMatch && priceMatch
       );
     });
 
@@ -100,9 +93,7 @@ export default function CollectionGrid({
     } else if (sortBy === "price-high") {
       result = [...result].sort((a, b) => b.price - a.price);
     } else if (sortBy === "title") {
-      result = [...result].sort((a, b) =>
-        a.title.localeCompare(b.title)
-      );
+      result = [...result].sort((a, b) => a.title.localeCompare(b.title));
     }
 
     return result;
@@ -169,7 +160,7 @@ export default function CollectionGrid({
 
   return (
     <section className="bg-[#f7f5f1] text-[#292923]">
-      <div className="mx-auto max-w-[1600px] px-4 py-10 sm:px-6 sm:py-14 lg:px-11 lg:py-16">
+      <div className="mx-auto px-4 py-8 sm:px-6 sm:py-8 lg:px-10 lg:py-15">
         {/* Optional collection heading */}
         {(eyebrow || title || description) && (
           <div className="mb-10 max-w-2xl sm:mb-12">
@@ -211,9 +202,7 @@ export default function CollectionGrid({
               >
                 {category.label}
                 {isActive && (
-                  <span className="ml-1">
-                    ({filteredProducts.length})
-                  </span>
+                  <span className="ml-1">({filteredProducts.length})</span>
                 )}
               </button>
             );
@@ -230,7 +219,7 @@ export default function CollectionGrid({
                   aria-expanded={openFilter === filter.label}
                   onClick={() =>
                     setOpenFilter((current) =>
-                      current === filter.label ? "" : filter.label
+                      current === filter.label ? "" : filter.label,
                     )
                   }
                   className={`inline-flex min-w-19 items-center justify-between gap-3 border px-3 py-2.5 text-[11px] transition-colors sm:min-w-23.5 sm:px-4 ${
@@ -338,10 +327,7 @@ export default function CollectionGrid({
 
                 <div className="mt-3 flex items-start justify-between gap-2">
                   <h2 className="min-w-0 text-[11px] leading-5 sm:text-xs">
-                    <Link
-                      to={product.slug}
-                      className="hover:text-[#646951]"
-                    >
+                    <Link to={product.slug} className="hover:text-[#646951]">
                       {product.title}
                     </Link>
                   </h2>
@@ -360,9 +346,7 @@ export default function CollectionGrid({
           </div>
         ) : (
           <div className="py-20 text-center sm:py-28">
-            <h2 className="font-serif text-2xl sm:text-3xl">
-              No pieces found
-            </h2>
+            <h2 className="font-serif text-2xl sm:text-3xl">No pieces found</h2>
             <p className="mt-3 text-sm text-[#807c74]">
               Try adjusting your filters to discover more pieces.
             </p>
