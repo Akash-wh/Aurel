@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export interface BlogArticleData {
   id: string;
-  category: string;
+  categories: string[];
   title: string;
   excerpt: string;
   image: string;
@@ -40,7 +40,7 @@ export default function SingleBlog({
           </Link>
 
           <p className="mt-8 text-[10px] uppercase tracking-[0.24em] text-[#646951]">
-            {blog.category}
+            {blog.categories.join(" · ")}
           </p>
 
           <h1 className="mt-4 font-serif text-3xl font-normal leading-tight sm:text-4xl md:text-5xl lg:text-6xl">

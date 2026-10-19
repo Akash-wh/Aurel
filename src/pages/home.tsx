@@ -145,7 +145,7 @@ export default function Home() {
         title="FASHION FORWARD"
         description="Discover the latest trends and styles that define modern fashion."
         buttonText="Explore Collection"
-        buttonLink="/collections"
+        buttonLink="/collections/tops"
         image={Fashion}
         imageAlt="Fashion Forward"
         collection=""

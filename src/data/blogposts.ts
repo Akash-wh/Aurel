@@ -14,7 +14,7 @@ export interface BlogContentSection {
 
 export interface BlogPost {
   id: string;
-  category: string;
+  categories: string[];
   title: string;
   excerpt: string;
   image: string;
@@ -27,7 +27,7 @@ export interface BlogPost {
 
 export const featuredPost: BlogPost = {
   id: "featured",
-  category: "Style Notes",
+  categories: ["Style Notes"],
   title: "The art of building a timeless wardrobe",
   excerpt:
     "Discover how thoughtful essentials, versatile silhouettes, and considered choices can help you create a wardrobe that feels distinctly your own.",
@@ -65,7 +65,7 @@ export const featuredPost: BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     id: "01",
-    category: "Style Notes",
+    categories: ["Style Notes"],
     title: "Less, but better: the capsule wardrobe",
     excerpt:
       "A practical approach to choosing fewer pieces that work beautifully together.",
@@ -102,7 +102,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "02",
-    category: "Fabric & Form",
+    categories: ["Fabric & Form", "Care & Craft"],
     title: "Getting to know your fabrics",
     excerpt:
       "Explore texture, drape, and the details that influence how a garment feels.",
@@ -139,7 +139,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "03",
-    category: "Everyday Living",
+    categories: ["Everyday Living"],
     title: "A slower approach to getting dressed",
     excerpt:
       "Create a daily dressing ritual that feels personal, simple, and effortless.",
@@ -175,7 +175,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "04",
-    category: "Care & Craft",
+    categories: ["Care & Craft", "Fabric & Form"],
     title: "Making your favourite pieces last",
     excerpt:
       "Small, considered care habits can help preserve your clothing over time.",
@@ -212,7 +212,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "05",
-    category: "Style Notes",
+    categories: ["Style Notes"],
     title: "The beauty of understated details",
     excerpt:
       "Discover how subtle shapes, finishes, and proportions can transform an outfit.",
@@ -248,7 +248,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "06",
-    category: "Everyday Living",
+    categories: ["Everyday Living"],
     title: "Finding your personal style",
     excerpt:
       "Build confidence in what you wear by discovering the shapes and colours you love.",

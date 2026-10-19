@@ -54,7 +54,13 @@ export default function JournalPost() {
   return (
     <>
       <SingleBlog blog={post} />
-      <FeaturedBlogs posts={allBlogPosts} currentPostId={post.id} category={post.category} title="More stories in this category" limit={3} />
+      <FeaturedBlogs
+        posts={allBlogPosts}
+        currentPostId={post.id}
+        categories={[]}
+        title="More stories in this category"
+        limit={3}
+      />
       <Newsletter {...newsletterData} onSubscribe={handleSubscribe} />
     </>
   );
