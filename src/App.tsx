@@ -11,6 +11,7 @@ import Faq from "./pages/faq";
 import Journal from "./pages/journal";
 import ProductPage from "./pages/products/page";
 import IndividualCollection from "./pages/individualcollection";
+import SingleBlog from "./pages/Journal/page";
 
 import SizeGuide from "./pages/guide/sizeguide";
 import CareGuide from "./pages/guide/careguide";
@@ -27,12 +28,7 @@ import ForgotPassword from "./pages/account/forgetpassword";
 import "./App.css";
 import "./index.css";
 
-import { 
-  BrowserRouter, 
-  Routes, 
-  Route, 
-  useLocation 
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import { useEffect } from "react";
 
@@ -49,7 +45,6 @@ function ScrollToTop() {
 
   return null;
 }
-
 
 export default function App() {
   return (
@@ -117,6 +112,14 @@ export default function App() {
           element={
             <Layout>
               <Journal />
+            </Layout>
+          }
+        />
+        <Route
+          path="/journal/:slug"
+          element={
+            <Layout>
+              <SingleBlog />
             </Layout>
           }
         />
