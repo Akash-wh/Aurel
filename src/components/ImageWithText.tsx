@@ -41,10 +41,10 @@ export default function ImageWithText({
         {/* Text content */}
         <div
           className={`flex items-center px-6 py-10 sm:px-12 sm:py-16 lg:px-[11%] lg:py-20 ${
-            imagePosition === "right" ? "md:order-1" : "md:order-2"
+            imagePosition === "right" ? "md:order-1 bg-[#D9D5CB]" : "md:order-2"
           }`}
         >
-          <div className="mx-auto w-full max-w-117.5">
+          <div className="mx-auto w-full ">
             <p className="mb-7 text-[9px] font-normal uppercase tracking-wide text-[#85817b]">
               {eyebrow}
             </p>

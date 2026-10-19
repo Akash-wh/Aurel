@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 export interface ProductDetailsProps {
@@ -39,9 +38,7 @@ export default function ProductDetails({
   const [activeImage, setActiveImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState(initialSize);
   const [saved, setSaved] = useState(false);
-  const [openSections, setOpenSections] = useState<string[]>([
-    "details",
-  ]);
+  const [openSections, setOpenSections] = useState<string[]>(["details"]);
 
   const sections = [
     { id: "details", title: "Details & composition", content: details },
@@ -58,13 +55,13 @@ export default function ProductDetails({
     setOpenSections((current) =>
       current.includes(id)
         ? current.filter((item) => item !== id)
-        : [...current, id]
+        : [...current, id],
     );
   };
 
   return (
     <section className="min-h-screen bg-[#f7f5f1] text-[#292923]">
-      <div className="mx-auto max-w-[1800px] px-4 py-5 sm:px-6 lg:px-10 lg:py-8">
+      <div className="mx-auto max-w-[1800px] px-4 py-8 sm:px-6 lg:px-10 lg:py-15">
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1.55fr)_minmax(360px,1fr)] lg:gap-10 xl:gap-14">
           {/* Product image gallery */}
           <div className="min-w-0">
@@ -73,7 +70,8 @@ export default function ProductDetails({
                 <img
                   src={images[activeImage]}
                   alt={`${imageAlt} — image ${activeImage + 1}`}
-                  className="aspect-4/5 w-full object-cover sm:aspect-[5/5.2] lg:aspect-[0.91/1] xl:aspect-[1/1.03]"
+                  className="w-full object-cover"
+                  // className="aspect-4/5 w-full object-cover sm:aspect-[5/5.2] lg:aspect-[0.91/1] xl:aspect-[1/1.03]"
                 />
               )}
 
@@ -87,7 +85,7 @@ export default function ProductDetails({
                 aria-label="Show next product image"
                 onClick={() =>
                   setActiveImage((current) =>
-                    images.length ? (current + 1) % images.length : 0
+                    images.length ? (current + 1) % images.length : 0,
                   )
                 }
                 className="absolute bottom-4 right-4 flex size-9 items-center justify-center bg-[#f7f5f1]/90 text-lg transition hover:bg-white"
@@ -143,9 +141,7 @@ export default function ProductDetails({
                 {currency}
                 {price.toLocaleString("en-US")}
               </span>
-              <span className="text-[10px] text-[#807c74]">
-                / VAT included
-              </span>
+              <span className="text-[10px] text-[#807c74]">/ VAT included</span>
             </div>
 
             <p className="mt-5 max-w-lg text-xs leading-6 text-[#807c74] sm:text-sm sm:leading-7">
@@ -193,8 +189,8 @@ export default function ProductDetails({
                 <div className="mt-3 border border-[#dedbd1] p-4">
                   <p className="text-xs font-medium">Size guide</p>
                   <p className="mt-2 text-xs leading-6 text-[#807c74]">
-                    Choose your usual size for a relaxed fit. For exact
-                    garment measurements, add your size chart here.
+                    Choose your usual size for a relaxed fit. For exact garment
+                    measurements, add your size chart here.
                   </p>
                   <button
                     type="button"
@@ -263,9 +259,7 @@ export default function ProductDetails({
                       className="flex min-h-12 w-full items-center justify-between gap-4 py-3 text-left text-[10px]"
                     >
                       <span>{section.title}</span>
-                      <span className="text-sm">
-                        {isOpen ? "−" : "+"}
-                      </span>
+                      <span className="text-sm">{isOpen ? "−" : "+"}</span>
                     </button>
 
                     {isOpen && (
